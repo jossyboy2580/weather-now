@@ -1,8 +1,13 @@
+import { Fragment } from 'react';
+
+import logo from './assets/images/logo.svg';
 import './App.css'
 
 function App() {
   return (
-    <h1 className='main-heading'>This is a test page</h1>
+    <div className='App'>
+      <img src={logo} />
+    </div>
   )
 }
 

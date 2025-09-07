@@ -1,3 +1,8 @@
+.App {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 h1.main-heading {
     font-family: 'DM Sans', sans-serif;
 }
