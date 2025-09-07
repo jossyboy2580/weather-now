@@ -1,0 +1,25 @@
+.units-switcher {
+    display: grid;
+    gap: .5em;
+    align-items: end;
+    justify-items: end;
+}
+
+.units-switcher-options,
+.units-switcher-button {
+
+    background: var(--neutral-800);
+    color: var(--neutral-0);
+    border: none;
+    border-radius: 6px;
+    padding: .5em;
+}
+
+.units-switcher-button {
+    display: flex;
+    gap: .5ch;
+}
+
+.units-switcher-options {
+    
+}
