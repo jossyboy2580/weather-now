@@ -1,8 +1,181 @@
-.App {
-    max-width: 1200px;
+/* Stles for the header of the page */
+
+
+header{
+    padding-inline: 16px;
+    padding-top: clamp(16px, 5vw, 48px);
+    max-width: 1216px;
     margin: 0 auto;
 }
 
-h1.main-heading {
-    font-family: 'DM Sans', sans-serif;
+main {
+    padding-inline: 16px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: clamp(137px, 15vw, 196px);
+}
+
+.units-switcher-toggle {
+    background: var(--neutral-800);
+    color: var(--neutral-0);
+    padding: .8125rem 1rem;
+    display: flex;
+    gap: .6875rem;
+}
+
+/* Styles for the Main content of the page */
+
+
+main .wrapper {
+    display: grid;
+    gap: 1rem;
+
+    @media (min-width: 900px) {
+	main .wrapper {
+	    grid-template-columns: auto auto;
+	}
+    }
+}
+
+.hero {
+    padding-block: 28px;
+    display: grid;
+    gap: 2rem;
+}
+
+h1.hero__title {
+    font-family: 'Bricolage Grotesque';
+    font-weight: bold;
+    font-size: 52px;
+    text-align: center;
+}
+
+.hero__form {
+    display: grid;
+    gap: 12px;
+
+    @media (min-width: 700px) {
+	grid-template-columns: 1fr auto;
+    }
+}
+
+.hero__input, .hero__button {
+    font-size: 20px;
+    color: var(--neutral-0);
+    //font-weight: 500;
+    padding: 18px 24px;
+    border-radius: 1rem;
+}
+
+.hero__input {
+    padding-left: 60px;
+    background: var(--neutral-800);
+    background-image: url('./assets/images/icon-search.svg');
+    background-repeat: no-repeat;
+    background-position: 24px 50%;
+}
+
+.hero__input::placeholder {
+    color: var(--neutral-0);
+}
+
+.hero__button {
+    background: var(--blue-500);
+    color: var(--neutral-0);
+}
+
+/* Current Weather Section Styles */
+
+.current-weather {
+    aspect-ratio: 6 / 5;
+    padding: 2rem;
+    background: url('./assets/images/bg-today-small.svg') no-repeat center/contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(2rem, 20%, 50rem);
+}
+
+.current-weather__location-and-time {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+.current-weather__location {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.current-weather__main {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.current-weather__icon {
+    height: 90px;
+    width: 90px;
+}
+
+.current-weather__temp {
+    font-size: 96px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.weather-stats {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media(min-width: 700px) {
+	grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.weather-stats__item {
+    border: 1px solid var(--neutral-600);
+    padding: 32px;
+    background: var(--neutral-800);
+    border-radius: 1rem;
+    display: grid;
+    gap: 32px;
+}
+
+
+/* Styles for Hourly forecast section */
+.hourly-forecast {
+    display: grid;
+    gap: 1rem;
+    background-color: var(--neutral-800);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.hourly-forecast-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hourly-forecast__item {
+    background-color: var(--neutral-700);
+    padding: 18px;
+    display: flex;
+    gap: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.hourly-forecast__temp {
+    margin-left: auto;
 }

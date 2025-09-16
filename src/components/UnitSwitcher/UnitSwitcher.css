@@ -3,6 +3,7 @@
     gap: .5em;
     align-items: end;
     justify-items: end;
+    position: relative;
 }
 
 .units-switcher-options,
@@ -11,20 +12,25 @@
     background: var(--neutral-800);
     color: var(--neutral-0);
     border: none;
-    border-radius: 6px;
-    padding: .5em;
+    border-radius: 7px;
+    padding: 0.8125rem 1rem;
 }
 
 .units-switcher-button {
     display: flex;
-    gap: .5ch;
+    gap: 0.6875rem;
     cursor: pointer;
 }
 
 .units-switcher-options {
-    position: fixed;
-    top: 80px;
+    position: absolute;
+    top: calc(100% + .5rem);
+    right: 0;
     
+}
+
+.toggle-units-style {
+    padding: .5em;
 }
 
 .form-group {
@@ -41,4 +47,33 @@
 
 .form-group [type='radio']:checked {
     background: url('../../assets/images/icon-checkmark.svg') no-repeat center;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--neutral-600);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #555;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.divider:not(:empty)::before {
+    margin-right: .75em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .75em;
 }

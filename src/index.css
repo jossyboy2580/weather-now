@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Bricolage Grotesque";
-    src: url('./assets/fonts/bricolage-grotesque-v8-latin-regular.woff2') format('woff2');
+    src: url('/fonts/bricolage-grotesque-v8-latin-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: "Bricolage Grotesque";
-    src: url('./assets/fonts/bricolage-grotesque-v8-latin-700.woff2') format('woff2');
+    src: url('/fonts/bricolage-grotesque-v8-latin-700.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: "DM Sans";
-    src: url('./assets/fonts/dm-sans-v16-latin-300.woff2') format('woff2');
+    src: url('/fonts/dm-sans-v16-latin-300.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
     font-family: "DM Sans";
-    src: url('./assets/fonts/dm-sans-v16-latin-regular.woff2') format('woff2');
+    src: url('/fonts/dm-sans-v16-latin-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -34,7 +34,7 @@
 
 @font-face {
     font-family: "DM Sans";
-    src: url('./assets/fonts/dm-sans-v16-latin-500.woff2') format('woff2');
+    src: url('/fonts/dm-sans-v16-latin-500.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -42,7 +42,7 @@
 
 @font-face {
     font-family: "DM Sans";
-    src: url('./assets/fonts/dm-sans-v16-latin-600.woff2') format('woff2');
+    src: url('/fonts/dm-sans-v16-latin-600.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -50,7 +50,7 @@
 
 @font-face {
     font-family: "DM Sans";
-    src: url('./assets/fonts/dm-sans-v16-latin-600italic.woff2') format('woff2');
+    src: url('/fonts/dm-sans-v16-latin-600italic.woff2') format('woff2');
     font-weight: 600;
     font-style: italic;
     font-display: swap;
@@ -58,7 +58,7 @@
 
 @font-face {
     font-family: "DM Sans";
-    src: url('./assets/fonts/dm-sans-v16-latin-700.woff2') format('woff2');
+    src: url('/fonts/dm-sans-v16-latin-700.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -83,18 +83,38 @@
     --blue-700: hsl(248, 70%, 36%);
 
     /* Font */
-    --fs-base: 18px;
+    --fs-300: ;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.8rem;
+    --fs-700: 2rem;
+    --fs-800: 3.25rem
+
+    /* Spacings */
+    --space-200: 11px;
+    --space-300: 13px;
+    --space-400: 16px;
+    --space-500: 18px;
+    --space-600: 24px;
+    --space-700: 32px;
+    
 }
-
-
 
 body {
     background: var(--neutral-900);
+    color: var(--neutral-0);
     font-size: var(--fs-base);
     font-family: 'DM Sans', sans-serif;
-    padding: 2em;
 }
 
 input, button, textarea {
     font: inherit;
 }
+
+button, input {
+    white-space: nowrap;
+    border: none;
+    border-radius: 0.4375em;
+}
+
+

@@ -20,8 +20,7 @@ export default function UnitSwitcher() {
       </button>
       { showUnitsOptions && (
 	<div className='units-switcher-options'>
-	  Units Options are being shown
-	  
+	  <button type='button' className='toggle-units-style'>Switch to imperial</button>
 	  <fieldset className=''>
 	    <legend>Temperature</legend>
 	    <div className='form-group'>
@@ -33,6 +32,8 @@ export default function UnitSwitcher() {
 	      <input type='radio' name='temperature' id ='fahrenheit' value='fahrenheit' />
 	    </div>
 	  </fieldset>
+
+	<hr />
 
 	  <fieldset className=''>
 	    <legend>Wind Speed</legend>
@@ -46,6 +47,8 @@ export default function UnitSwitcher() {
 	    </div>
 	  </fieldset>
 
+	  	<hr />
+
 	  <fieldset className=''>
 	    <legend>Precipitation</legend>
 	    <div className='form-group'>
@@ -57,6 +60,9 @@ export default function UnitSwitcher() {
 	      <input type='radio' name='precipitation' id ='inches' value='inches' />
 	    </div>
 	  </fieldset>
+	  
+	  <div className='divider'>OR</div>
+	  
 	</div>
       )}
     </div>

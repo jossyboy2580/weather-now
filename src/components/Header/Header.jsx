@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className='header'>
       <div className='container header-content'>
-	<img src={logo} alt='Weather Now logo' />
+	<img src={logo} alt='Weather Now logo' className='logo'/>
 	<UnitSwitcher />
       </div>
     </header>
