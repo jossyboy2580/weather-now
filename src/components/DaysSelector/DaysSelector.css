@@ -1,0 +1,35 @@
+.days-selector {
+    display: grid;
+    justify-items: end;
+    position: relative;
+}
+
+.days-selector__button {
+    cursor: pointer;
+    padding: var(--spacing-150) var(--spacing-200);
+    background: var(--neutral-700);
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    
+}
+
+.days-selector__options {
+    width: 214px;
+    position: absolute;
+    top: calc(100% + var(--spacing-125));
+    padding: var(--spacing-100);
+    background: var(--neutral-800);
+    border: 1px solid var(--neutral-600);
+    border-radius: var(--radius-12);
+    box-shadow: 0 8px 16px rgba(2, 1, 44,.32);
+
+    display: grid;
+    gap: var(--spacing-050);
+}
+
+.days-selector__option {
+    padding: var(--spacing-125) var(--spacing-100);
+    background: var(--neutral-700);
+    border-radius: var(--radius-8);
+}

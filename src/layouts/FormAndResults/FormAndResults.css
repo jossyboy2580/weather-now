@@ -1,0 +1,8 @@
+.form-and-results {
+    display: grid;
+    gap: var(--spacing-400);
+
+    @media (min-width: 768px) {
+	gap: var(--spacing-600);
+    }
+}

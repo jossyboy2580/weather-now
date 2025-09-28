@@ -1,0 +1,8 @@
+.weather {
+    display: grid;
+    gap: var(--spacing-250);
+
+    @media (min-width: 768px) {
+	gap: var(--spacing-400);
+    }
+}

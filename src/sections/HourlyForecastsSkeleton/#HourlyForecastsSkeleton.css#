@@ -1,0 +1,19 @@
+.hourly-forecasts-skeleton {
+    align-self: start;
+    display: grid;
+    gap: var(--spacing-200);
+    background-color: var(--neutral-800);
+    border-radius: var(--radius-20);
+    padding: var(--spacing-300);
+
+    @media (min-width: 1216px) {
+	grid-column: 2 / -1;
+	grid-row: 1 / -1;
+    }
+}
+
+.hourly-forecast-skeleton__item {
+    height: 60px;
+    width: 100%;
+    background: white;
+}

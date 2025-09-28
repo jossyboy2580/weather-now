@@ -1,0 +1,33 @@
+.weather-details {
+    grid-column: 1 / 2;
+    display: grid;
+    gap: var(--spacing-200);
+    grid-template-columns: repeat(2, 1fr);
+
+    @media(min-width: 700px) {
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--spacing-250);
+    }
+
+    @media(min-width: 1216px) {
+	gap: var(--spacing-300);
+    }
+}
+
+.weather-details__item {
+    padding: var(--spacing-250);
+    background: var(--neutral-800);
+    border: 1px solid var(--neutral-600);
+    border-radius: var(--radius-12);
+    display: grid;
+    gap: var(--spacing-300);
+    
+}
+
+.weather-details__label {
+    font-size: 18px;
+}
+
+.weather-details__value {
+    font-size: 32px;
+}

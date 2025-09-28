@@ -1,0 +1,18 @@
+.results {
+    display: grid;
+    gap: var(--spacing-400);
+
+    @media (min-width: 1216px) {
+	grid-template-columns: 800px 1fr;
+    }
+}
+
+.first-half {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+
+    @media (min-width: 768px) {
+	gap: var(--spacing-600); /* Take a look at the value of this property */
+    }
+}

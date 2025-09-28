@@ -1,0 +1,43 @@
+/* Styles for Daily forecast section */
+
+.daily-forecasts {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: grid;
+    gap: var(--spacing-250);
+}
+
+.daily-forecast__cards {
+    display: grid;
+    gap: var(--spacing-200);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.daily-forecast__card {
+    background: var(--neutral-800);
+    border: 1px solid var(--neutral-600);
+    border-radius: 1rem;
+    padding: var(--spacing-200) var(--spacing-125);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-200);
+}
+
+.daily-forecast__day {
+    font-size: 18px;
+}
+
+.daily-forecast__icon {
+    width: 60px;
+    aspect-ratio: 1;
+}
+
+.daily-forecast__temperatures {
+    font-size: 16px;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,39 @@
+main.api-error {
+    margin-top: var(--spacing-800);
+
+    display: grid;
+    justify-items: center;
+    gap: var(--spacing-300);
+}
+
+.no-drop-icon {
+    height: 50px;
+    width: 42px;
+}
+
+h1.error-page-title {
+    font-family: 'Bricolage Grotesque';
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 1.2;
+}
+
+.error-page-details {
+    max-width: 554px;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.retry-button {
+    color: inherit;
+    padding: var(--spacing-150) var(--spacing-200);
+    background: var(--neutral-800);
+    display: flex;
+    gap: var(--spacing-100);
+    border-radius: var(--radius-8);
+}
+
+.retry-icon {
+    color: black;
+}

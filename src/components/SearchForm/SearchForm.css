@@ -1,0 +1,84 @@
+.form-and-results {
+    display: grid;
+    gap: var(--spacing-400);
+}
+
+section.form-section {
+    grid-column: 1 / -1;
+}
+
+.form {
+
+    display: grid;
+    gap: 12px;
+
+    @media (min-width: 700px) {
+	grid-template-columns: 1fr auto;
+    }
+
+    @media (min-width: 1216px) {
+	max-width: 756px;
+	margin: 0 auto;
+    }
+}
+
+.input-and-suggestions {
+    display: grid;
+    position: relative;
+}
+
+.suggestions-list {
+    background: var(--neutral-800);
+    position: absolute;
+    top: calc(100% + var(--spacing-100));
+    left: 0;
+    right: 0;
+    padding: var(--spacing-100);
+    border-radius: var(--radius-12);
+    display: grid;
+    gap: var(--spacing-050);
+}
+
+.suggestion-item {
+    display: block;
+    padding: var(--spacing-125) var(--spacing-100);
+    border: 1px solid transparent;
+    border-radius: var(--radius-8);
+    cursor: pointer;
+    
+}
+
+.suggestion-item:hover, .suggestion-item:active {
+    border-color: var(--neutral-600);
+    background: var(--neutral-700);
+}
+
+.form__input, .form__button {
+    font-size: 20px;
+    color: var(--neutral-0);
+    //font-weight: 500;
+    padding: 18px 24px;
+    border-radius: 1rem;
+}
+
+.form__input {
+    padding-left: 60px;
+    background: var(--neutral-800);
+    background-image: url('../../assets/images/icon-search.svg');
+    background-repeat: no-repeat;
+    background-position: 24px 50%;
+}
+
+.form__input::placeholder {
+    color: var(--neutral-300);
+}
+
+.form__button {
+    background: var(--blue-500);
+    color: var(--neutral-0);
+}
+
+.form__button:hover,
+.form__button:focus-visible {
+    background: var(--blue-700);
+}

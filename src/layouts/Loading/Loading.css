@@ -1,0 +1,9 @@
+.loading {
+    margin-top: var(--spacing-400);
+    display: grid;
+    gap: var(--spacing-200);
+
+    @media (min-width: 1216px) {
+	grid-template-columns: 800px 1fr;
+    }
+}

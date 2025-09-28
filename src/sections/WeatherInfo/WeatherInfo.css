@@ -1,0 +1,50 @@
+/* Current Weather Section Styles */
+
+.weather-info {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding: var(--spacing-1000) var(--spacing-300);
+    background: url('../../assets/images/bg-today-small.svg') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-200);
+    border-radius: var(--radius-20);
+    height: 286px;
+
+    @media (min-width: 720px) {
+	flex-direction: row;
+	gap: 0px;
+	justify-content: space-between;
+	background: url('../../assets/images/bg-today-large.svg') no-repeat center/cover;
+    }
+}
+
+.weather-info__location-and-time {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+.weather-info__location {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.weather-info__main {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.weather-info__icon {
+    height: 90px;
+    width: 90px;
+}
+
+.weather-info__temp {
+    font-size: 96px;
+    font-weight: 600;
+    font-style: italic;
+}
