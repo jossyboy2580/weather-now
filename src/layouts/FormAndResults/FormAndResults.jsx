@@ -10,13 +10,13 @@ import { Results } from '../../compound-components';
 
 export default function FormAndResults() {
   const { location } = useContext(LocationContext);
-  const { setWeather } = useContext(WeatherContext);
+  const { setWeatherData } = useContext(WeatherContext);
 
   useEffect(() => {
     if (location) {
-      const weather = getWeatherData(location?.longitude, location?.latitude);
-      if (weather) {
-	setWeather(weather);
+      const data = getWeatherData(location?.longitude, location?.latitude);
+      if (data) {
+	setWeatherData(data);
       } else {
 	return;
       }

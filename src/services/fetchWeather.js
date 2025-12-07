@@ -1,10 +1,13 @@
 import { fetchWeatherApi } from 'openmeteo';
 
-export async function getWeatherData(longitude, latitude) {
-  if (!longitude || !latitude) return;
+export async function getWeatherData(coords, timezone = 'Europe/Berlin') {
+  
+  if (!coords || coords.length < 1) return;
+  coords = {longitude: String(coords.longitude), latitude: String(coords.latitude)};
+  
   const params = {
-    'latitide': latitude,
-    'longitude': longitude,
+    'latitude': coords.latitude,
+    'longitude': coords.longitude,
     'current': ['temperature_2m', 'weather_code', 'precipitation', 'relative_humidity_2m', 'wind_speed_10m'],
     'hourly': ['temperature_2m', 'weather_code'],
     'daily': ['temperature_2m_max', 'temperature_2m_min', 'weather_code'],
@@ -18,10 +21,11 @@ export async function getWeatherData(longitude, latitude) {
   const current = response.current();
   const hourly = response.hourly();
   const daily = response.daily();
+  const utcOffsetSeconds = response.utcOffsetSeconds();
   
   const weatherData = {
     current: {
-      time: new Date((Number(current.time()) + utcOffsetSeconds) + 1000),
+      time: new Date((Number(current.time()) + utcOffsetSeconds) * 1000),
       temperature: current.variables(0).value(),
       weather_code: current.variables(1).value(),
       precipitation: current.variables(2).value(),

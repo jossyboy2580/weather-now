@@ -12,6 +12,7 @@
     gap: var(--spacing-200);
     border-radius: var(--radius-20);
     height: 286px;
+    position: relative;
 
     @media (min-width: 720px) {
 	flex-direction: row;
@@ -19,6 +20,38 @@
 	justify-content: space-between;
 	background: url('../../assets/images/bg-today-large.svg') no-repeat center/cover;
     }
+}
+
+.weather-info.skeletonContainer {
+    background: var(--neutral-800);
+}
+
+.favourite-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #00e676;
+    background: rgb(255,255,255, .05);
+    backdrop-filter: blur(10px);
+    transition: all 250ms ease-in-out;
+}
+
+.favourite-button:active {
+    transform: scale(.85);
+}
+
+.favourite-icon {
+    stroke: white;
+    stroke-width: 1px;
+    fill: transparent;
+}
+
+.favourite-icon.favourite {
+    fill: #00e676;
+    stroke: #00e676;
 }
 
 .weather-info__location-and-time {

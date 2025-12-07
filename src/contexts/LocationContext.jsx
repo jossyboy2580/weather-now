@@ -4,7 +4,7 @@ export const LocationContext = createContext();
 
 
 export default function LocationProvider({ children }) {
-  const [location, setLocation] = useState({});
+  const [location, setLocation] = useState('');
 
   return (
     <LocationContext.Provider value={{location, setLocation}}>

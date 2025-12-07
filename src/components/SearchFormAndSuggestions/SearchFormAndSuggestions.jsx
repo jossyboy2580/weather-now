@@ -1,20 +1,17 @@
-import { useContext, useState, useEffect, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setCurrentLocation } from '../../redux/locationSlice';
-import { LocationContext } from '../../contexts/LocationContext';
-
-import { useCoords } from '../../contexts/CoordsContext';
+import { useState } from 'react';
 
 import SuggestionsList from '../SuggestionsList/SuggestionsList';
+import SearchForm from '../SearchForm/SearchForm';
 
-import './SearchForm.css';
-
-export default function SearchForm({ setCities }) {
+export default function SearchFormAndSuggestions() {
+  const [cities, setCities] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+
   const [searchInput, setSearchInput] = useState('');
-  const [cities, setCities] = useState(null);
+  
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(false);
+  
   const dispatch = useDispatch();
   
   const abortControllerRef = useRef();
@@ -70,9 +67,8 @@ export default function SearchForm({ setCities }) {
 
   }, [searchInput]);
 
-  
   return (
-    <section className="form-section">
+    <section className='search-form-and-suggestions'>
       <form className="form" ref={cityQueryRef}>
 	<input
 	  name='place'

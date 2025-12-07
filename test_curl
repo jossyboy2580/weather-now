@@ -1,0 +1,13 @@
+curl 'https://api.open-meteo.com/v1/forecast?latitide=4.87&longitude=6.98&current=temperature_2m%2Cweather_code%2Cprecipitation%2Crelative_humidity_2m%2Cwind_speed_10m&hourly=temperature_2m%2Cweather_code&daily=temperature_2m_max%2Ctemperature_2m_min%2Cweather_code&format=flatbuffers' \
+  -H 'Accept: */*' \
+    -H 'Accept-Language: en-US,en;q=0.9' \
+      -H 'Connection: keep-alive' \
+        -H 'Origin: http://localhost:5173' \
+	  -H 'Referer: http://localhost:5173/' \
+	    -H 'Sec-Fetch-Dest: empty' \
+	      -H 'Sec-Fetch-Mode: cors' \
+	        -H 'Sec-Fetch-Site: cross-site' \
+		  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36' \
+		    -H 'sec-ch-ua: "Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"' \
+		      -H 'sec-ch-ua-mobile: ?0' \
+		        -H 'sec-ch-ua-platform: "Windows"'

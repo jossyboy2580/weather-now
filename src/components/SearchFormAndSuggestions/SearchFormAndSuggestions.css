@@ -1,5 +1,6 @@
-section.form-section {
-    grid-column: 1 / -1;
+.search-form-and-suggestions {
+    display: grid;
+    gap: var(--spacing-400);
 }
 
 .form {
@@ -15,11 +16,6 @@ section.form-section {
 	max-width: 756px;
 	margin: 0 auto;
     }
-}
-
-.input-and-suggestions {
-    display: grid;
-    position: relative;
 }
 
 .is-loading, .suggestions-list {
